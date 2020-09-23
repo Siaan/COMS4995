@@ -1,3 +1,7 @@
 # COMS4995
 
-Develop a python package that helps a new user who is unfamiliar with intricate models/techniques implement models without having to know the background.
+Idea 1:
+Create a webapp to animate user profile pictures. Fun idea similar to: https://receiptify.herokuapp.com/ and https://www.instagram.com/albumreceipts/
+
+Idea 2: 
+Contribute to issues probablistic machine learning open source packages such as https://github.com/pyro-ppl/pyro/issues 
