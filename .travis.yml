@@ -6,9 +6,7 @@ install:
   - echo "no indepedencies"
 
 script:
-  - python2 -m pytest -vvv my_test_proj/
-  - yarn build
-  - yarn test
+  - python2 -m pytest -vvv tests/
 
 branches:
   only:
