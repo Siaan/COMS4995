@@ -1,6 +1,6 @@
 # Kalman Filter
 ![GitHub](https://img.shields.io/github/license/siaan/project-proposals-f2020?style=plastic)
-
+[![Build Status](https://travis-ci.org/Siaan/kalmanfilter.svg?branch=master)](https://travis-ci.org/Siaan/kalmanfilter)
 
 
 ## Kalman Filter
