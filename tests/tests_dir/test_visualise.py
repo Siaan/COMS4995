@@ -17,7 +17,7 @@ def test_visualize():
     assert type(visualize(5,4)) is str
 
 def test_visualize():
-    assert visualize(5,6) is "figure created""
+    assert visualize(5,6) is "figure created"
 
 '''
 @mock.patch("%s.visualise.plt" % __name__)
