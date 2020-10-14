@@ -10,7 +10,9 @@ def input_process(x,y):
 def output_process(x,y):
     return np.asarray([y])
 
-
+def visualize(x,y):
+    output = "figure created"
+    return output
 
 def visualise(x, y, x_messy, x_real=None):
     '''
