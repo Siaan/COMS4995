@@ -1,4 +1,4 @@
-from tests import input_process
+from tests import input_process, output_process
 #from unittest import mock
 #import scripts.main.clean_KF as KF
 
@@ -6,7 +6,13 @@ import numpy as np
 
 def test_inputprocess():
     test_array = np.array([5])
-    assert input_process(5) ==  test_array
+    assert input_process(5,4) ==  test_array
+
+
+def test_outputprocess():
+    test_array = np.array([5])
+    assert output_process(5,4) ==  test_array
+
 
 '''
 @mock.patch("%s.visualise.plt" % __name__)
