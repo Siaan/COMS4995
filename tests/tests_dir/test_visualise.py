@@ -1,4 +1,4 @@
-from tests.scripts.main.clean_KF import *
+from tests import visualise
 from unittest import mock
 #import scripts.main.clean_KF as KF
 
