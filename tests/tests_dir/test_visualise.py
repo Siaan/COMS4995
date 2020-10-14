@@ -10,7 +10,7 @@ def test_inputprocess():
 
 
 def test_outputprocess():
-    test_array = np.array([5])
+    test_array = np.array([4])
     assert output_process(5,4) ==  test_array
 
 
