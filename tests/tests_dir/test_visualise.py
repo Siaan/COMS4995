@@ -1,4 +1,4 @@
-from tests import input_process, output_process, visualise
+from tests import input_process, output_process, visualize
 #from unittest import mock
 #import scripts.main.clean_KF as KF
 
