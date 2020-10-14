@@ -6,7 +6,7 @@ import numpy as np
 
 def test_inputprocess():
     test_array = np.array([5])
-    np.testing_assert_array_equal(input_process(5), test_array)
+    assert input_process(5) ==  test_array
 
 '''
 @mock.patch("%s.visualise.plt" % __name__)
