@@ -11,6 +11,7 @@ def output_process(x,y):
     return np.asarray([y])
 
 
+
 def visualise(x, y, x_messy, x_real=None):
     '''
 
@@ -30,4 +31,5 @@ def visualise(x, y, x_messy, x_real=None):
     plt.legend()
     plt.title('RTS Smoother')
     plt.show()
- 
+    output = "figure created"
+    return output

@@ -13,6 +13,11 @@ def test_outputprocess():
     test_array = np.array([4])
     assert output_process(5,4) ==  test_array
 
+def test_visualise():
+    assert type(visualise(5,4,6)) is str
+
+def test_visualise():
+    assert visualise(5,6,3) is "figure created""
 
 '''
 @mock.patch("%s.visualise.plt" % __name__)
