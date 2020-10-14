@@ -1,4 +1,4 @@
-from tests import input_process, output_process
+from tests import input_process, output_process, visualize
 #from unittest import mock
 #import scripts.main.clean_KF as KF
 
@@ -13,6 +13,12 @@ def test_outputprocess():
     test_array = np.array([4])
     assert output_process(5,4) ==  test_array
 
+def test_visualize():
+    assert type(visualize(5,4)) is str
+
+def test_visualize():
+    result = "figure created"
+    assert visualize(5,6) == result
 
 '''
 @mock.patch("%s.visualise.plt" % __name__)
