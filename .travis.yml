@@ -3,10 +3,10 @@ python: 2.7
 cache: pypi
 
 install:
-  - pip install codecov
+  - pip install codecov pytest pytest-cov
 
 script:
-  - python2 -m pytest -vvv --cov=./ tests/
+  - python2 -m pytest -vvv tests/ --cov tests
 
 branches:
   only:
