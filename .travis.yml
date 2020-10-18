@@ -8,10 +8,11 @@ install:
 script:
   - python2 -m pytest -vvv tests/ --cov tests
 
+after_success:
+ - codecov
+
 branches:
   only:
   - master
 
-after_success:
- - bash <(curl -s https://codecov.io/bash)
 
