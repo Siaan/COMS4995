@@ -1,24 +1,28 @@
 from tests import input_process, output_process, visualize
-#from unittest import mock
-#import scripts.main.clean_KF as KF
+# from unittest import mock
+# import scripts.main.clean_KF as KF
 
 import numpy as np
 
+
 def test_inputprocess():
     test_array = np.array([5])
-    assert input_process(5,4) ==  test_array
+    assert input_process(5, 4) == test_array
 
 
 def test_outputprocess():
     test_array = np.array([4])
-    assert output_process(5,4) ==  test_array
+    assert output_process(5, 4) == test_array
+
 
 def test_visualize():
-    assert type(visualize(5,4)) is str
+    assert isinstance(visualize(5, 4), str)
 
-def test_visualize():
+
+def test_visualize():  # noqa: F811
     result = "figure created"
-    assert visualize(5,6) == result
+    assert visualize(5, 6) == result
+
 
 '''
 @mock.patch("%s.visualise.plt" % __name__)

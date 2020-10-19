@@ -1,15 +1,14 @@
 #! /usr/bin/env python
+from numpy.random import randn
+from main import clean_KF as Kalman
 import numpy as np
 import math
 import sys
 
-#new_path
+# new_path
 sys.path.insert(0, '/LDS/main/')
 
-#import main.clean_KF as Kalman
-from main import clean_KF as Kalman
-
-from numpy.random import randn
+# import main.clean_KF as Kalman
 
 
 def compute_data(z_var, process_var, count=1, dt=1.):
@@ -19,25 +18,28 @@ def compute_data(z_var, process_var, count=1, dt=1.):
     xs, zs = [], []
     for _ in range(count):
         v = vel + (randn() * p_std)
-        x += v*dt
+        x += v * dt
         xs.append(x)
         zs.append(x + randn() * z_std)
     return np.array(xs), np.array(zs)
 
 
-#real, zedd = compute_data(2.45, 4.45, 50)
+# real, zedd = compute_data(2.45, 4.45, 50)
 
-#xs, cv, kf = Kalman.run_kf(data=zedd, dim_of_measurements=1, measured_var=(10,4.5), covar=((500,0),(0,49)), process_model=((1, 1), (0, 1)), white_noise_var=.35, dt=1, sensor_covar=(5), measurement_function=(1,0))
+# xs, cv, kf = Kalman.run_kf(data=zedd, dim_of_measurements=1, measured_var=(10,4.5), covar=((500,0),(0,49)), process_model=((1, 1), (0, 1)), white_noise_var=.35, dt=1, sensor_covar=(5), measurement_function=(1,0)) # noqa: E501
 
-#x,p = Kalman.run_smoother(kf, xs,cv)
-#Kalman.visualise(x, p, zedd, real)
+# x,p = Kalman.run_smoother(kf, xs,cv)
+# Kalman.visualise(x, p, zedd, real)
 
 if __name__ == '__main__':
     real, zedd = compute_data(2.45, 4.45, 50)
 
-    xs, cv, kf = Kalman.run_kf(data=zedd, dim_of_measurements=1, measured_var=(10, 4.5), covar=((500, 0), (0, 49)),
-                               process_model=((1, 1), (0, 1)), white_noise_var=.35, dt=1, sensor_covar=(5),
-                               measurement_function=(1, 0))
+    xs, cv, kf = Kalman.run_kf(
+        data=zedd, dim_of_measurements=1, measured_var=(
+            10, 4.5), covar=(
+            (500, 0), (0, 49)), process_model=(
+                (1, 1), (0, 1)), white_noise_var=.35, dt=1, sensor_covar=(5), measurement_function=(  # noqa: E501
+                    1, 0))
 
     x, p = Kalman.run_smoother(kf, xs, cv)
 
