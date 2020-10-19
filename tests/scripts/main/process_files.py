@@ -1,14 +1,15 @@
 #! /usr/bin/env python
 import numpy as np
-import math
+import math  # noqa: F401
 import pandas as pd
-import sys
-import os
+import sys  # noqa: F401
+import os  # noqa: F401
 import yaml
 import pandas
-#sys.path.append("/home/ubuntu/NeuroCAAS/LDS_algo/neurocaas_remote")
-#import main.clean_KF as Kalman
-import clean_KF as Kalman
+# sys.path.append("/home/ubuntu/NeuroCAAS/LDS_algo/neurocaas_remote")
+# import main.clean_KF as Kalman
+import clean_KF as Kalman  # noqa: F401
+
 
 def process_parameters(configname):
     configparams = yaml.load(open(configname, 'r'), Loader=yaml.FullLoader)
@@ -22,11 +23,12 @@ def process_parameters(configname):
         sensor_covar = configparams["sensor_covar"]
         measurement_function = configparams["measurement_function"]
 
-    except Exception as e:
+    except Exception as e:  # noqa: F841
         print("params not given")
         raise OSError("params not given correctly.")
 
-    return dim_of_measurements, measured_var, covar, process_model, white_noise_var, dt, sensor_covar, measurement_function
+    return dim_of_measurements, measured_var, covar, process_model, white_noise_var, dt, sensor_covar, measurement_function  # noqa: E501
+
 
 def process_data_file(dataname):
     df = pd.read_csv(dataname)
@@ -34,23 +36,22 @@ def process_data_file(dataname):
 
     return zedd
 
-def process_output(x,p, output_loc):
+
+def process_output(x, p, output_loc):
     output = []
     for i in range(len(x)):
         output.append({'x': np.array(x[i][0]), 'c': p[i]})
 
-    import os
     df = pd.DataFrame().append(output)
-    df.to_csv(os.path.join(output_loc,r'output.csv'), index=False, columns=['x', 'c'])
-
+    df.to_csv(
+        os.path.join(
+            output_loc,
+            r'output.csv'),
+        index=False,
+        columns=[
+            'x',
+            'c'])
 
 
 if __name__ == '__main__':
     print('No Errors')
-
-
-
-
-
-
-
