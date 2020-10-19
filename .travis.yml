@@ -10,7 +10,7 @@ install:
 script:
   - autopep8 --in-place -r -a -a tests/
   - flake8 tests/
-  - python2 -m pytest -vvv tests/ --cov=tests
+  - python2 -m pytest -vvv tests/ --cov tests
 
 after_success:
   - codecov
