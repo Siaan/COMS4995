@@ -13,7 +13,7 @@ Kalman Filter provides estimates of unknown variables given the measurements obs
 
 
 ## Example
-![Alt Text]https://raw.githubusercontent.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/master/animations/05_dog_track.gif
+![](https://raw.githubusercontent.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/master/animations/05_dog_track.gif)
 
 
 
