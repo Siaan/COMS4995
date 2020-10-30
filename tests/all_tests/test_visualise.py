@@ -1,9 +1,13 @@
 from tests import input_process, output_process, visualize
 # from unittest import mock
 # import scripts.main.clean_KF as KF
+from scripts.main import *
 
 import numpy as np
 
+def test_process_data_file():
+    test_process  = np.array([5])
+    assert type(process_data_file('test.csv')) == type(test_process)
 
 def test_inputprocess():
     test_array = np.array([5])
