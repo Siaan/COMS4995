@@ -42,7 +42,7 @@ def process_output(x,p, output_loc):
     import os
     df = pd.DataFrame().append(output)
     df.to_csv(os.path.join(output_loc,r'output.csv'), index=False, columns=['x', 'c'])
-
+    return df
 
 
 if __name__ == '__main__':
