@@ -4,11 +4,23 @@ from tests import input_process, output_process, visualize
 from scripts.main import process_data_file
 import pandas as pd
 import numpy as np
+import os
 
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+
+'''
 def test_process_data_file():
     test_process  = np.array([5])
-    file = pd.read_csv('test.csv')
+    file = pd.read_csv('test.csv'
     assert type(process_data_file(file)) == type(test_process)
+'''
+
+def test_process_output():
+    x = [[5,6]]
+    x = np.asarray(x)
+    p = np.array([5])
+    df = pd.DataFrame()
+    assert type(process_output(x, p, THIS_DIR) == type(df))
 
 def test_inputprocess():
     test_array = np.array([5])
