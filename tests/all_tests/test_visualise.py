@@ -7,7 +7,8 @@ import numpy as np
 
 def test_process_data_file():
     test_process  = np.array([5])
-    assert type(process_data_file('test.csv')) == type(test_process)
+    file = pd.read_csv('test.csv')
+    assert type(process_data_file(file)) == type(test_process)
 
 def test_inputprocess():
     test_array = np.array([5])
