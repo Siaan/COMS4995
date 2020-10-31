@@ -21,7 +21,7 @@ def test_process_output():
     x = np.asarray(x)
     p = np.array([5])
     df = pd.DataFrame()
-    assert type(process_output(x, p, THIS_DIR) == type(df))
+    assert type(process_output(x, p, THIS_DIR)) == type(df)
 
 def test_inputprocess():
     test_array = np.array([5])
