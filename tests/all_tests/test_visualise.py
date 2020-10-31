@@ -2,7 +2,7 @@ from tests import input_process, output_process, visualize
 # from unittest import mock
 # import scripts.main.clean_KF as KF
 from scripts.main import process_data_file
-
+import pandas as pd
 import numpy as np
 
 def test_process_data_file():
