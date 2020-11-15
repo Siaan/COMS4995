@@ -9,7 +9,7 @@
 
 Kalman Filter, also known as Hidden Markov Model, is a dimensionality reduction model which assumes that data follows an underlying latent linear dynamical system. It projects high dimensional data into a low dimensional represenation while preserving the main features/variables (better known as explanatory variables) which it believes explains the data well. 
 
-## How it works
+## How It Works
 Kalman Filter provides estimates of unknown variables given the measurements observed over time. There are two main steps:
 1. Prediction Step:
   Given a current estimate of a measurement (for example position in the x axis) x_t, we can predict x_{t+1}
