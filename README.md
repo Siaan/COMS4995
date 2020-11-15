@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Siaan/kalmanfilter.svg?branch=master)](https://travis-ci.org/Siaan/kalmanfilter)
 ![Codecov](https://img.shields.io/codecov/c/gh/Siaan/kalmanfilter)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/siaan/kalmanfilter?style=flat-square)
-
+[![Documentation Status](https://readthedocs.org/projects/kalmanfilter/badge/?version=latest)](https://kalmanfilter.readthedocs.io/en/latest/?badge=latest)
 
 ## Kalman Filter
 
