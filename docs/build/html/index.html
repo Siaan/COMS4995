@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>kalmanfilter documentation master file, created by &mdash; kalmanfilter 0.0.1 documentation</title>
+  <title>Welcome to kalmanfilter’s documentation! &mdash; kalmanfilter 0.0.1 documentation</title>
   
 
   
@@ -91,9 +91,10 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">kalmanfilter documentation master file, created by</a></li>
-<li><a class="reference internal" href="#welcome-to-kalmanfilter-s-documentation">Welcome to &gt; kalmanfilter’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">Welcome to  kalmanfilter’s documentation!</a><ul>
+<li><a class="reference internal" href="#what-is-kalman-filter">What is Kalman Filter?</a></li>
+</ul>
+</li>
 </ul>
 </div>
             
@@ -140,7 +141,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>kalmanfilter documentation master file, created by</li>
+      <li>Welcome to  kalmanfilter’s documentation!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,23 +160,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="kalmanfilter-documentation-master-file-created-by">
-<h1>kalmanfilter documentation master file, created by<a class="headerlink" href="#kalmanfilter-documentation-master-file-created-by" title="Permalink to this headline">¶</a></h1>
-<p>sphinx-quickstart on Fri Nov 13 00:35:52 2020.
-You can adapt this file completely to your liking, but it should at least
-contain the root <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive.</p>
-</div>
-<div class="section" id="welcome-to-kalmanfilter-s-documentation">
-<h1>Welcome to &gt; kalmanfilter’s documentation!<a class="headerlink" href="#welcome-to-kalmanfilter-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="welcome-to-kalmanfilter-s-documentation">
+<h1>Welcome to  kalmanfilter’s documentation!<a class="headerlink" href="#welcome-to-kalmanfilter-s-documentation" title="Permalink to this headline">¶</a></h1>
 <p>==========================================</p>
+<div class="section" id="what-is-kalman-filter">
+<h2>What is Kalman Filter?<a class="headerlink" href="#what-is-kalman-filter" title="Permalink to this headline">¶</a></h2>
+<p>Kalman Filter, also known as Hidden Markov Model, is a dimensionality reduction model which assumes that data follows an underlying latent linear dynamical system. It projects high dimensional data into a low dimensional represenation while preserving the main features/variables (better known as explanatory variables) which it believes explains the data well.</p>
+<p>This project is integrated with an open source platform for neural data analysis called NeuroCAAS. We aim to separate the engineer from the scientist. Hence the only thing users will have to implement are the common paramters for kalman filter such as:</p>
 <ul class="simple">
-<li>try</li>
-<li>this</li>
-<li>out</li>
+<li>Data collected (observations)</li>
+<li>Transition matrix: A</li>
+<li>Noise Covariance: P</li>
+<li>Input control: B</li>
+<li>Control Input Noise Covar : U</li>
+<li>Sensor Measurement: H</li>
+<li>Sensor Noise Covar: R</li>
 </ul>
+<p>The input will be in the form of two files. An input file for the observations and a yaml file for configurations.</p>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
