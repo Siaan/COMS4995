@@ -1,1 +1,8 @@
 .coverage
+<<<<<<< HEAD
+=======
+docs/_build
+docs/_static
+docs/_templates
+>>>>>>> 4be2f5d9ca44a6a4705e8e7a45c01107a4196f04
+*.pyc
