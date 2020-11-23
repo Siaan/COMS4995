@@ -22,6 +22,7 @@ Despite initial estimates or raw measurements, the Kalman Filter does a computat
 ![](https://raw.githubusercontent.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/master/animations/05_dog_track.gif)
 
 
-
+This project, as well as all my other research projects are mentioned on my website:  
+https://siaan.github.io/research-projects/ 
 
 
