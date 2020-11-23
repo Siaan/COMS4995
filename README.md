@@ -4,6 +4,7 @@
 ![Codecov](https://img.shields.io/codecov/c/gh/Siaan/kalmanfilter)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/siaan/kalmanfilter?style=flat-square)
 [![Documentation Status](https://readthedocs.org/projects/kalmanfilter/badge/?version=latest)](https://kalmanfilter.readthedocs.io/en/latest/?badge=latest)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Siaan/kalmanfilter?style=flat-square)
 
 ## Kalman Filter
 
