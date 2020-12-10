@@ -3,7 +3,15 @@ import sys
 from pandas.core.common import flatten
 import numpy as np
 from filterpy.kalman import KalmanFilter
+
+import matplotlib as mpl
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    mpl.use('Agg')
 import matplotlib.pyplot as plt
+
+import os
+#import matplotlib.pyplot as plt
 from filterpy.common import Q_discrete_white_noise
 from filterpy.stats import plot_covariance_ellipse
 import process_files
@@ -117,7 +125,7 @@ def run_smoother(kf, xs, ps):
     x, P, K, Pp = kf.rts_smoother(Xs=xs, Ps=ps)
     return x, P
 
-def visualise(x, y, x_messy, x_real=None):
+def visualise(x, y, x_messy, output_loc, x_real=None):
     '''
 
     :param x: filterd/smoothed data
@@ -127,7 +135,8 @@ def visualise(x, y, x_messy, x_real=None):
     :return: plot comparing raw data and smooth/filtered data
     '''
     plt.figure(figsize=(10,10))
-    plt.plot(range(1, len(x)+1), x[:, 0], c='r', label='Smoothed data')
+    x_first = list(list(zip(*x))[0])
+    plt.plot(range(1, len(x)+1), x_first, c='r', label='Smoothed data')
     plt.plot(range(1, len(x_messy) + 1), x_messy, '--o', c='g', label='Noisy Measurement')
     if x_real.all() != None:
         plt.plot(range(1, len(x_real) + 1), x_real, '--o', c='royalblue', label='True position')
@@ -135,6 +144,8 @@ def visualise(x, y, x_messy, x_real=None):
 
     plt.legend()
     plt.title('RTS Smoother')
+    results_dir = os.path.join(output_loc, r'results.png')
+    plt.savefig(results_dir)
     plt.show()
     return
 
@@ -179,7 +190,7 @@ if __name__ == '__main__':
 
 
 
-    #Kalman.visualise(x, p, zedd, real)
+    visualise(x, p, zedd,output_loc, None)
 
 
 
