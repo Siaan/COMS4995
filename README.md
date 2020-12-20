@@ -31,4 +31,6 @@ The user is only responsible for 1. data.csv 2. configuration.yaml. These two fi
 This project, as well as all my other research projects are mentioned on my website:  
 https://siaan.github.io/research-projects/ 
 
+The documentation is hosted: https://kalmanfilter.readthedocs.io/en/latest/ 
+
 
