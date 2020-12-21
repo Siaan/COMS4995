@@ -1,0 +1,22 @@
+tests.scripts.main package
+==========================
+
+Submodules
+----------
+
+tests.scripts.main.process\_files module
+----------------------------------------
+
+.. automodule:: tests.scripts.main.process_files
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: tests.scripts.main
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,30 @@
+scripts.main package
+====================
+
+Submodules
+----------
+
+scripts.main.clean\_KF module
+-----------------------------
+
+.. automodule:: scripts.main.clean_KF
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+scripts.main.process\_files module
+----------------------------------
+
+.. automodule:: scripts.main.process_files
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: scripts.main
+    :members:
+    :undoc-members:
+    :show-inheritance:

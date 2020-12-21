@@ -1,0 +1,17 @@
+tests.scripts package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    tests.scripts.main
+
+Module contents
+---------------
+
+.. automodule:: tests.scripts
+    :members:
+    :undoc-members:
+    :show-inheritance:
