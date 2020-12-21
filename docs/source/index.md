@@ -23,7 +23,7 @@ There are 2 main procedures for the Kalman Filter:
 
 Using the observations we can define our update equations as follow: ![Update Equations](update.png)
 
-Then the predict step goes as follow: !(Prediction Equations)(predict.png)
+Then the predict step goes as follow: ![Prediction Equations](predict.png)
 
 
 The input will be in the form of two files. A .csv  file for the observations and a .yaml file for configurations. This can be uploaded on the website in a drag and drop fashion.
