@@ -3,21 +3,18 @@ import numpy as np
 import pandas as pd
 import yaml
 import pandas
-#sys.path.append("/home/ubuntu/NeuroCAAS/LDS_algo/neurocaas_remote")
-#import main.clean_KF as Kalman
-#import clean_KF as Kalman
 
 def process_parameters(configname): #noqa: E265
     configparams = yaml.load(open(configname, 'r'), Loader=yaml.FullLoader) #noqa: E265
     try:
-        dim_of_measurements = configparams["dim_of_measurements"]
+        dim_of_measurements = configparams["dim_of_measurements"] #noqa: E501
         measured_var = configparams["measured_var"]
         covar = configparams["covar"]
         process_model = configparams["process_model"]
         white_noise_var = configparams["white_noise_var"]
         dt = configparams["dt"]
         sensor_covar = configparams["sensor_covar"]
-        measurement_function = configparams["measurement_function"]
+        measurement_function = configparams["measurement_function"] #noqa: E501
 
     except Exception as e: #noqa F841
         print("params not given")
@@ -38,7 +35,7 @@ def process_output(x,p, output_loc):
 
     import os
     df = pd.DataFrame().append(output)
-    df.to_csv(os.path.join(output_loc,r'output.csv'), index=False, columns=['x', 'c'])
+    df.to_csv(os.path.join(output_loc,r'output.csv'), index=False, columns=['x', 'c']) #noqa: E501
     return df
 
 
