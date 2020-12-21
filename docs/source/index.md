@@ -17,6 +17,10 @@ This project is integrated with an open source platform for neural data analysis
 
 The input will be in the form of two files. An input file for the observations and a yaml file for configurations.
 
+![Schema](schema.png)
+
+![](https://raw.githubusercontent.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/master/animations/05_dog_track.gif)
+
 
 ```eval_rst
 .. toctree::
