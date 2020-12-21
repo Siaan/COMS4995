@@ -20,10 +20,14 @@ Kalman Filter provides estimates of unknown variables given the measurements obs
 
 Despite initial estimates or raw measurements, the Kalman Filter does a computationally efficient analysis of predicting values. 
 
+## Getting Started
+Easy use of this algorithm will be availble on http://neurocaas.org/. The user is only required to have (1) observations in a .csv file, (2) model configurations in a .yaml file. The rest is done for you.
+
 ## Demo
 ![](https://raw.githubusercontent.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/master/animations/05_dog_track.gif)
 
 
+The red line shows the raw observations and the green line shows the smoothed output data.
 Since this project is created for use on http://neurocaas.org/ the demo is presented on that website. 
 The user is only responsible for 1. data.csv 2. configuration.yaml. These two files are uploaded to the website and the code handles the rest. 
 

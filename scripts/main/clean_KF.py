@@ -3,7 +3,7 @@ import sys
 from pandas.core.common import flatten
 import numpy as np
 from filterpy.kalman import KalmanFilter
-
+import os
 import matplotlib as mpl
 if os.environ.get('DISPLAY','') == '':
     print('no display found. Using non-interactive Agg backend')
