@@ -15,6 +15,17 @@ This project is integrated with an open source platform for neural data analysis
  - Sensor Measurement: H
  - Sensor Noise Covar: R
 
+The multivariate Kalman Filter follows a multivariate Gaussian distribution. A multivariate Gaussian distribution is defined by the mean and covariance matrices.
+
+There are 2 main procedures for the Kalman Filter:
+(1) Updating the empirical results
+(2) Predicting the next value
+
+Using the observations we can define our update equations as follow: ![Update Equations](update.png)
+
+Then the predict step goes as follow: !(Prediction Equations)(predict.png)
+
+
 The input will be in the form of two files. A .csv  file for the observations and a .yaml file for configurations. This can be uploaded on the website in a drag and drop fashion.
 
 ![Schema](schema.png)
