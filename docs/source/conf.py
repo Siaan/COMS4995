@@ -15,7 +15,6 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath("../.."))
-
 import sphinx_rtd_theme
 from recommonmark.transform import AutoStructify
 
