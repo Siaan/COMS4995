@@ -5,7 +5,8 @@ import yaml
 import pandas
 
 def process_parameters(configname): #noqa: E265
-    configparams = yaml.load(open(configname, 'r'), Loader=yaml.FullLoader) #noqa: E265 #noqa: E501
+    configparams = yaml.load(open(configname, 'r'), 
+	           Loader=yaml.FullLoader) #noqa: E501
     try: #noqa: E501
         dim_of_measurements = configparams["dim_of_measurements"] #noqa: E501
         measured_var = configparams["measured_var"]
