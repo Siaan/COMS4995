@@ -10,19 +10,8 @@ from filterpy.stats import plot_covariance_ellipse  # noqa: F401
 #import process_files
 
 
-def preprocess(
-        num_measured,
-        measured_var,
-        covar,
-        process_model,
-        white_noise_var,
-        dt,
-        sensor_covar,
-        measurement_function,
-        B=0,
-        U=0):
+def preprocess( num_measured,measured_var, covar, process_model, white_noise_var, dt,sensor_covar, measurement_function,B=0, U=0):
     '''
-
     :param num_measured: size of measurement vector.
            For example: if there is only one sensor that measures position x then num_measured = 1 # noqa: E501, W291
     :param measured_var: Mean state variables vector
@@ -100,25 +89,14 @@ def create_kf_and_assign_predict_update(dim_z, X, P, A, Q, dt, R, H, B, U):
 
 
 # data = zedd
-def run_kf(
-        data,
-        dim_of_measurements,
-        measured_var,
-        covar,
-        process_model,
-        white_noise_var,
-        dt,
-        sensor_covar,
-        measurement_function):
+def run_kf( data, dim_of_measurements,measured_var,covar, process_model,white_noise_var, dt,sensor_covar,measurement_function):
     '''
     This runs the kalman filter on noisy data entered
     :return: Filtered data, covariances and kalman filter used
     '''
     xs, cv = [], []
-    dim_z, X, P, A, Q, dt, R, H, B, U = preprocess(num_measured=dim_of_measurements, measured_var=measured_var,  # noqa: E501
-                                                   covar=covar,
-                                                   process_model=process_model, white_noise_var=white_noise_var, dt=dt,  # noqa: E501
-                                                   sensor_covar=sensor_covar, measurement_function=measurement_function)  # noqa: E501
+    dim_z, X, P, A, Q, dt, R, H, B, U = preprocess(num_measured=dim_of_measurements, measured_var=measured_var, covar=covar, process_model=process_model, white_noise_var=white_noise_var, dt=dt, 
+                                                   sensor_covar=sensor_covar, measurement_function=measurement_function)
     kf = create_kf_and_assign_predict_update(dim_z, X, P, A, Q, dt, R, H, B, U)
 
     for i in data:
@@ -155,24 +133,9 @@ def visualise(x, y, x_messy, x_real=None):
     '''
     plt.figure(figsize=(10, 10))
     plt.plot(range(1, len(x) + 1), x[:, 0], c='r', label='Smoothed data')
-    plt.plot(
-        range(
-            1,
-            len(x_messy) +
-            1),
-        x_messy,
-        '--o',
-        c='g',
-        label='Noisy Measurement')
+    plt.plot(range( 1, len(x_messy) + 1), x_messy, '--o', c='g',label='Noisy Measurement')
     if x_real.all() is not None:
-        plt.plot(
-            range(
-                1,
-                len(x_real) + 1),
-            x_real,
-            '--o',
-            c='royalblue',
-            label='True position')
+        plt.plot(range( 1, len(x_real) + 1),x_real,'--o',c='royalblue',label='True position')
     # plt.plot(range(1, len(x)+1), cv, c='r', label='Smoothed data')
 
     plt.legend()
