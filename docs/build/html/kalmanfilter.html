@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>kalmanfilter package &mdash; kalmanfilter 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests package" href="tests.html" />
+    <link rel="prev" title="kalmanfilter" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> kalmanfilter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">kalmanfilter</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">kalmanfilter package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.clean_KF">scripts.main.clean_KF module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.clean_KF">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">kalmanfilter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">kalmanfilter</a> &raquo;</li>
+        
+      <li>kalmanfilter package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/kalmanfilter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kalmanfilter-package">
+<h1>kalmanfilter package<a class="headerlink" href="#kalmanfilter-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tests.clean_KF">
+<span id="scripts-main-clean-kf-module"></span><h2>scripts.main.clean_KF module<a class="headerlink" href="#module-tests.clean_KF" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tests.clean_KF.create_kf_and_assign_predict_update">
+<code class="descclassname">tests.clean_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.create_kf_and_assign_predict_update" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tuple</strong> (<em>configs</em>) – all the values to define the kalman filter</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Kalman Filter</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tests.clean_KF.preprocess">
+<code class="descclassname">tests.clean_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>num_measured</strong> – size of measurement vector.
+For example: if there is only one sensor that measures position x then num_measured = 1 # noqa: E501, W291</li>
+<li><strong>measured_var</strong> – Mean state variables vector
+For example: State variables can be either observed (directly measured by a sensor) or # noqa: E501
+hidden variables (inferred from observed variables). For a sensor that measures the x (position - e.x 10) # noqa: E501
+of a car, we can infer the velocity (dx - e.x 4.5)
+Therefore mean state variable vector is [10, 4.5].T for a 2d case
+measured_var = (10,4.5) # noqa: W291</li>
+<li><strong>covar</strong> – Covariance matrix of all state variables
+For example: if the variance of x = 500 and dx = 49 and the correlation is unknown # noqa: E501
+covar = ((500,0),(0,49))</li>
+<li><strong>process_model</strong> – <p>Transition matrix for process
+For example: The relationship between x and dx is: x’  = 1* x + (dt) dx  where dt = 0.1 # noqa: E501</p>
+<blockquote>
+<div>dx’ = 0* x + (1)  dx (for our purposes)</div></blockquote>
+<p>Then process_model= ((1, 0.1), (0, 1))</p>
+</li>
+<li><strong>white_noise_var</strong> – Variance of noise in process (float)</li>
+<li><strong>dt</strong> – time step (in seconds)</li>
+<li><strong>sensor_covar</strong> – Variance in sensor measurement (noise)
+For example: If only one sensor is used to measure x
+sensor_covar = (5)
+If two sensors are used to measure x and dx
+sensor_covar = (5,0),(0,2) etc</li>
+<li><strong>measurement_function</strong> – Converts state to measurement
+For example: if the measurement is x from the sensor but the state variable is x and dx
+then in matrix form : x - [1 0] [x, dx] = x - x
+Measurement_function = (1,0)</li>
+<li><strong>B</strong> – Control input matrix</li>
+<li><strong>U</strong> – Control input</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">all the variables above in np.array form</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tests.clean_KF.run_kf">
+<code class="descclassname">tests.clean_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.run_kf" title="Permalink to this definition">¶</a></dt>
+<dd><p>This runs the kalman filter on noisy data entered
+:return: Filtered data, covariances and kalman filter used</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tests.clean_KF.run_smoother">
+<code class="descclassname">tests.clean_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.run_smoother" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>kf</strong> – Kalman filter used in filter step</li>
+<li><strong>xs</strong> – filtered data</li>
+<li><strong>ps</strong> – covariances</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">x = smoothed data, P = covariances</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tests.clean_KF.visualise">
+<code class="descclassname">tests.clean_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.visualise" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> – filterd/smoothed data</li>
+<li><strong>y</strong> – covariances</li>
+<li><strong>x_real</strong> – real data</li>
+<li><strong>x_messy</strong> – raw measurements from sensors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">plot comparing raw data and smooth/filtered data</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.clean_KF">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests.clean_KF" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="descclassname">tests.clean_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tuple</strong> (<em>configs</em>) – all the values to define the kalman filter</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Kalman Filter</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descclassname">tests.clean_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>num_measured</strong> – size of measurement vector.
+For example: if there is only one sensor that measures position x then num_measured = 1 # noqa: E501, W291</li>
+<li><strong>measured_var</strong> – Mean state variables vector
+For example: State variables can be either observed (directly measured by a sensor) or # noqa: E501
+hidden variables (inferred from observed variables). For a sensor that measures the x (position - e.x 10) # noqa: E501
+of a car, we can infer the velocity (dx - e.x 4.5)
+Therefore mean state variable vector is [10, 4.5].T for a 2d case
+measured_var = (10,4.5) # noqa: W291</li>
+<li><strong>covar</strong> – Covariance matrix of all state variables
+For example: if the variance of x = 500 and dx = 49 and the correlation is unknown # noqa: E501
+covar = ((500,0),(0,49))</li>
+<li><strong>process_model</strong> – <p>Transition matrix for process
+For example: The relationship between x and dx is: x’  = 1* x + (dt) dx  where dt = 0.1 # noqa: E501</p>
+<blockquote>
+<div>dx’ = 0* x + (1)  dx (for our purposes)</div></blockquote>
+<p>Then process_model= ((1, 0.1), (0, 1))</p>
+</li>
+<li><strong>white_noise_var</strong> – Variance of noise in process (float)</li>
+<li><strong>dt</strong> – time step (in seconds)</li>
+<li><strong>sensor_covar</strong> – Variance in sensor measurement (noise)
+For example: If only one sensor is used to measure x
+sensor_covar = (5)
+If two sensors are used to measure x and dx
+sensor_covar = (5,0),(0,2) etc</li>
+<li><strong>measurement_function</strong> – Converts state to measurement
+For example: if the measurement is x from the sensor but the state variable is x and dx
+then in matrix form : x - [1 0] [x, dx] = x - x
+Measurement_function = (1,0)</li>
+<li><strong>B</strong> – Control input matrix</li>
+<li><strong>U</strong> – Control input</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">all the variables above in np.array form</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descclassname">tests.clean_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span></dt>
+<dd><p>This runs the kalman filter on noisy data entered
+:return: Filtered data, covariances and kalman filter used</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descclassname">tests.clean_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>kf</strong> – Kalman filter used in filter step</li>
+<li><strong>xs</strong> – filtered data</li>
+<li><strong>ps</strong> – covariances</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">x = smoothed data, P = covariances</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descclassname">tests.clean_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> – filterd/smoothed data</li>
+<li><strong>y</strong> – covariances</li>
+<li><strong>x_real</strong> – real data</li>
+<li><strong>x_messy</strong> – raw measurements from sensors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">plot comparing raw data and smooth/filtered data</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tests.html" class="btn btn-neutral float-right" title="tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="kalmanfilter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Sian Lee Kitt
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
