@@ -15,10 +15,12 @@ This project is integrated with an open source platform for neural data analysis
  - Sensor Measurement: H
  - Sensor Noise Covar: R
 
-The input will be in the form of two files. An input file for the observations and a yaml file for configurations.
+The input will be in the form of two files. A .csv  file for the observations and a .yaml file for configurations. This can be uploaded on the website in a drag and drop fashion.
 
 ![Schema](schema.png)
 
+
+The algorithm handles everything for you. The data is smoothed and compressed to a lower dimension. This illustrations displays the smoothing from the red raw observations to the smoothed green curve (top graph). The bottom graph shows the decrease in variance in approximations as the number of iterations increases.
 ![](https://raw.githubusercontent.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/master/animations/05_dog_track.gif)
 
 
