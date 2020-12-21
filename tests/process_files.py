@@ -1,17 +1,14 @@
 #! /usr/bin/env python
 import numpy as np
-import math
 import pandas as pd
-import sys
-import os
 import yaml
 import pandas
 #sys.path.append("/home/ubuntu/NeuroCAAS/LDS_algo/neurocaas_remote")
 #import main.clean_KF as Kalman
 #import clean_KF as Kalman
 
-def process_parameters(configname):
-    configparams = yaml.load(open(configname, 'r'), Loader=yaml.FullLoader)
+def process_parameters(configname): #noqa: E265
+    configparams = yaml.load(open(configname, 'r'), Loader=yaml.FullLoader) #noqa: E265
     try:
         dim_of_measurements = configparams["dim_of_measurements"]
         measured_var = configparams["measured_var"]
@@ -22,15 +19,15 @@ def process_parameters(configname):
         sensor_covar = configparams["sensor_covar"]
         measurement_function = configparams["measurement_function"]
 
-    except Exception as e:
+    except Exception as e: #noqa F841
         print("params not given")
         raise OSError("params not given correctly.")
 
-    return dim_of_measurements, measured_var, covar, process_model, white_noise_var, dt, sensor_covar, measurement_function
+    return dim_of_measurements, measured_var, covar, process_model, white_noise_var, dt, sensor_covar, measurement_function #noqa E501
 
 def process_data_file(dataname):
     df = pd.read_csv(dataname)
-    zedd = df.Observations.to_numpy()
+    zedd = df.Observations.to_numpy() #noqa: E501
 
     return zedd
 
@@ -45,7 +42,7 @@ def process_output(x,p, output_loc):
     return df
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': #noqa: F811
     print('No Errors')
 
 
