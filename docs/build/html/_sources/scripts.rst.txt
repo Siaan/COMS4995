@@ -1,0 +1,17 @@
+scripts package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    scripts.main
+
+Module contents
+---------------
+
+.. automodule:: scripts
+    :members:
+    :undoc-members:
+    :show-inheritance:

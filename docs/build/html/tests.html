@@ -45,7 +45,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="kalmanfilter package" href="kalmanfilter.html" /> 
+    <link rel="next" title="tests.scripts package" href="tests.scripts.html" />
+    <link rel="prev" title="kalmanfilter" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,10 +94,13 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">kalmanfilter</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="kalmanfilter.html">kalmanfilter package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">tests package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.scripts.html">tests.scripts package</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-tests.all_tests.test_visualise">tests.all_tests.test_extract module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.cleann_KF">tests.cleann_KF module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-tests">Module contents</a></li>
 </ul>
 </li>
@@ -171,86 +175,138 @@
             
   <div class="section" id="tests-package">
 <h1>tests package<a class="headerlink" href="#tests-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tests.scripts.html">tests.scripts package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.scripts.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.scripts.main.html">tests.scripts.main package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.scripts.main.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.scripts.main.html#tests-scripts-main-process-files-module">tests.scripts.main.process_files module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.scripts.main.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.scripts.html#module-tests.scripts">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tests.all_tests.test_visualise">
-<span id="tests-all-tests-test-extract-module"></span><h2>tests.all_tests.test_extract module<a class="headerlink" href="#module-tests.all_tests.test_visualise" title="Permalink to this headline">¶</a></h2>
-<dl class="data">
-<dt id="tests.all_tests.test_visualise.THIS_DIR">
-<code class="descclassname">tests.all_tests.test_visualise.</code><code class="descname">THIS_DIR</code><em class="property"> = '/Users/sianleekitt/Desktop/cs4995/kalmanfilter/tests/all_tests'</em><a class="headerlink" href="#tests.all_tests.test_visualise.THIS_DIR" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>def test_process_data_file():</dt>
-<dd>test_process  = np.array([5])
-file = pd.read_csv(‘test.csv’
-assert type(process_data_file(file)) == type(test_process)</dd>
-</dl>
-</dd></dl>
-
+<div class="section" id="module-tests.cleann_KF">
+<span id="tests-cleann-kf-module"></span><h2>tests.cleann_KF module<a class="headerlink" href="#module-tests.cleann_KF" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="tests.all_tests.test_visualise.test_inputprocess">
-<code class="descclassname">tests.all_tests.test_visualise.</code><code class="descname">test_inputprocess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.all_tests.test_visualise.test_inputprocess" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.create_kf_and_assign_predict_update">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.create_kf_and_assign_predict_update" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> – raw observations</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tuple</strong> (<em>configs</em>) – all the values to define the kalman filter</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">all input re-formatted into numpy arrays</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Kalman Filter</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="function">
-<dt id="tests.all_tests.test_visualise.test_outputprocess">
-<code class="descclassname">tests.all_tests.test_visualise.</code><code class="descname">test_outputprocess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.all_tests.test_visualise.test_outputprocess" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.preprocess">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.preprocess" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> – mediary values</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>num_measured</strong> – size of measurement vector.
+For example: if there is only one sensor that measures position x then num_measured = 1 # noqa: E501, W291</li>
+<li><strong>measured_var</strong> – Mean state variables vector
+For example: State variables can be either observed (directly measured by a sensor) or # noqa: E501
+hidden variables (inferred from observed variables). For a sensor that measures the x (position - e.x 10) # noqa: E501
+of a car, we can infer the velocity (dx - e.x 4.5)
+Therefore mean state variable vector is [10, 4.5].T for a 2d case
+measured_var = (10,4.5) # noqa: W291</li>
+<li><strong>covar</strong> – Covariance matrix of all state variables
+For example: if the variance of x = 500 and dx = 49 and the correlation is unknown # noqa: E501
+covar = ((500,0),(0,49))</li>
+<li><strong>process_model</strong> – <p>Transition matrix for process
+For example: The relationship between x and dx is: x’  = 1* x + (dt) dx  where dt = 0.1 # noqa: E501</p>
+<blockquote>
+<div>dx’ = 0* x + (1)  dx (for our purposes)</div></blockquote>
+<p>Then process_model= ((1, 0.1), (0, 1))</p>
+</li>
+<li><strong>white_noise_var</strong> – Variance of noise in process (float)</li>
+<li><strong>dt</strong> – time step (in seconds)</li>
+<li><strong>sensor_covar</strong> – Variance in sensor measurement (noise)
+For example: If only one sensor is used to measure x
+sensor_covar = (5)
+If two sensors are used to measure x and dx
+sensor_covar = (5,0),(0,2) etc</li>
+<li><strong>measurement_function</strong> – Converts state to measurement
+For example: if the measurement is x from the sensor but the state variable is x and dx
+then in matrix form : x - [1 0] [x, dx] = x - x
+Measurement_function = (1,0)</li>
+<li><strong>B</strong> – Control input matrix</li>
+<li><strong>U</strong> – Control input</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">numpy array</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">all the variables above in np.array form</p>
+</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="function">
-<dt id="tests.all_tests.test_visualise.test_process_output">
-<code class="descclassname">tests.all_tests.test_visualise.</code><code class="descname">test_process_output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.all_tests.test_visualise.test_process_output" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.run_kf">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.run_kf" title="Permalink to this definition">¶</a></dt>
+<dd><p>This runs the kalman filter on noisy data entered
+:return: Filtered data, covariances and kalman filter used</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tests.cleann_KF.run_smoother">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.run_smoother" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>kf</strong> – Kalman filter used in filter step</li>
+<li><strong>xs</strong> – filtered data</li>
+<li><strong>ps</strong> – covariances</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">x = smoothed data, P = covariances</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tests.cleann_KF.visualise">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.visualise" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>x</strong> – filterd/smoothed data</li>
-<li><strong>p</strong> – <a href="#id1"><span class="problematic" id="id2">covariances_</span></a></li>
+<li><strong>y</strong> – covariances</li>
+<li><strong>x_real</strong> – real data</li>
+<li><strong>x_messy</strong> – raw measurements from sensors</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dataframe of processed results</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="tests.all_tests.test_visualise.test_visualize">
-<code class="descclassname">tests.all_tests.test_visualise.</code><code class="descname">test_visualize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.all_tests.test_visualise.test_visualize" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> – filterd/smoothed data</li>
-<li><strong>p</strong> – covariances</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">ensures visuals are returned</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">plot comparing raw data and smooth/filtered data</p>
 </td>
 </tr>
 </tbody>
@@ -271,8 +327,10 @@ assert type(process_data_file(file)) == type(test_process)</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="tests.scripts.html" class="btn btn-neutral float-right" title="tests.scripts package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="kalmanfilter.html" class="btn btn-neutral float-left" title="kalmanfilter package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="kalmanfilter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

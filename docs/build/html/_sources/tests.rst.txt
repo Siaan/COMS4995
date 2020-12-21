@@ -1,21 +1,29 @@
 tests package
 =============
 
+Subpackages
+-----------
+
+.. toctree::
+
+    tests.scripts
+
 Submodules
 ----------
 
-tests.all_tests.test\_extract module
-------------------------------------
+tests.cleann\_KF module
+-----------------------
 
-.. automodule:: tests.all_tests.test_visualise
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. automodule:: tests.cleann_KF
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
 
 .. automodule:: tests
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
