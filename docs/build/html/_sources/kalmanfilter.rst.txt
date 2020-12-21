@@ -4,10 +4,10 @@ kalmanfilter package
 Submodules
 ----------
 
-scripts.main.clean_KF module
+scripts.clean_KF module
 ----------------------------
 
-.. automodule:: tests.clean_KF
+.. automodule:: tests.cleann_KF
    :members:
    :undoc-members:
    :show-inheritance:
@@ -16,7 +16,7 @@ scripts.main.clean_KF module
 Module contents
 ---------------
 
-.. automodule:: tests.clean_KF
+.. automodule:: tests.cleann_KF
    :members:
    :undoc-members:
    :show-inheritance:

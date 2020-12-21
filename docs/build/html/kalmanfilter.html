@@ -96,8 +96,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">kalmanfilter</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">kalmanfilter package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-tests.clean_KF">scripts.main.clean_KF module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-tests.clean_KF">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.cleann_KF">scripts.clean_KF module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.cleann_KF">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
@@ -175,11 +175,11 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tests.clean_KF">
-<span id="scripts-main-clean-kf-module"></span><h2>scripts.main.clean_KF module<a class="headerlink" href="#module-tests.clean_KF" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tests.cleann_KF">
+<span id="scripts-clean-kf-module"></span><h2>scripts.clean_KF module<a class="headerlink" href="#module-tests.cleann_KF" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="tests.clean_KF.create_kf_and_assign_predict_update">
-<code class="descclassname">tests.clean_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.create_kf_and_assign_predict_update" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.create_kf_and_assign_predict_update">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.create_kf_and_assign_predict_update" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -193,8 +193,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="tests.clean_KF.preprocess">
-<code class="descclassname">tests.clean_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.preprocess" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.preprocess">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.preprocess" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -241,15 +241,15 @@ Measurement_function = (1,0)</li>
 </dd></dl>
 
 <dl class="function">
-<dt id="tests.clean_KF.run_kf">
-<code class="descclassname">tests.clean_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.run_kf" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.run_kf">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.run_kf" title="Permalink to this definition">¶</a></dt>
 <dd><p>This runs the kalman filter on noisy data entered
 :return: Filtered data, covariances and kalman filter used</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="tests.clean_KF.run_smoother">
-<code class="descclassname">tests.clean_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.run_smoother" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.run_smoother">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.run_smoother" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -269,8 +269,8 @@ Measurement_function = (1,0)</li>
 </dd></dl>
 
 <dl class="function">
-<dt id="tests.clean_KF.visualise">
-<code class="descclassname">tests.clean_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.clean_KF.visualise" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.cleann_KF.visualise">
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.cleann_KF.visualise" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -291,11 +291,11 @@ Measurement_function = (1,0)</li>
 </dd></dl>
 
 </div>
-<div class="section" id="module-tests.clean_KF">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests.clean_KF" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tests.cleann_KF">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests.cleann_KF" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt>
-<code class="descclassname">tests.clean_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">create_kf_and_assign_predict_update</code><span class="sig-paren">(</span><em>dim_z</em>, <em>X</em>, <em>P</em>, <em>A</em>, <em>Q</em>, <em>dt</em>, <em>R</em>, <em>H</em>, <em>B</em>, <em>U</em><span class="sig-paren">)</span></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -310,7 +310,7 @@ Measurement_function = (1,0)</li>
 
 <dl class="function">
 <dt>
-<code class="descclassname">tests.clean_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>num_measured</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em>, <em>B=0</em>, <em>U=0</em><span class="sig-paren">)</span></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -358,14 +358,14 @@ Measurement_function = (1,0)</li>
 
 <dl class="function">
 <dt>
-<code class="descclassname">tests.clean_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">run_kf</code><span class="sig-paren">(</span><em>data</em>, <em>dim_of_measurements</em>, <em>measured_var</em>, <em>covar</em>, <em>process_model</em>, <em>white_noise_var</em>, <em>dt</em>, <em>sensor_covar</em>, <em>measurement_function</em><span class="sig-paren">)</span></dt>
 <dd><p>This runs the kalman filter on noisy data entered
 :return: Filtered data, covariances and kalman filter used</p>
 </dd></dl>
 
 <dl class="function">
 <dt>
-<code class="descclassname">tests.clean_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">run_smoother</code><span class="sig-paren">(</span><em>kf</em>, <em>xs</em>, <em>ps</em><span class="sig-paren">)</span></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -386,7 +386,7 @@ Measurement_function = (1,0)</li>
 
 <dl class="function">
 <dt>
-<code class="descclassname">tests.clean_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">tests.cleann_KF.</code><code class="descname">visualise</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>x_messy</em>, <em>x_real=None</em><span class="sig-paren">)</span></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
