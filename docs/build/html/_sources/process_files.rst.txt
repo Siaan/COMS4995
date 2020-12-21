@@ -1,0 +1,21 @@
+processfiles package
+====================
+
+Submodules
+----------
+
+scripts.main.process_files module
+-------------------------------------------------
+
+.. automodule:: scripts.main.process_files
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: process_files
+   :members:
+   :undoc-members:
+   :show-inheritance:

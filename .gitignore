@@ -1,2 +1,3 @@
 .coverage
-build/
+doc/_build
+docs/_templates
