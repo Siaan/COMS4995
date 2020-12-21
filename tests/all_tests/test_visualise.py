@@ -17,6 +17,12 @@ def test_process_data_file():
 '''
 
 def test_process_output():
+    '''
+    :param x: filterd/smoothed data
+    :param p: covariances_
+    :return: dataframe of processed results
+    '''
+
     x = [[5,6]]
     x = np.asarray(x)
     p = np.array([5])
@@ -24,20 +30,39 @@ def test_process_output():
     assert type(process_output(x, p, THIS_DIR)) == type(df)
 
 def test_inputprocess():
+    '''
+    :param x: raw observations
+    :return: all input re-formatted into numpy arrays
+    '''
     test_array = np.array([5])
     assert input_process(5, 4) == test_array
 
 
 def test_outputprocess():
+    '''
+    :param x: mediary values
+    :return: numpy array
+    '''
     test_array = np.array([4])
     assert output_process(5, 4) == test_array
 
 
 def test_visualize():
+    '''
+    :param x: filterd/smoothed data
+    :param p: covariances
+    :return: plotting of  processed results
+    '''
     assert isinstance(visualize(5, 4), str)
 
 
 def test_visualize():  # noqa: F811
+    '''
+    :param x: filterd/smoothed data
+    :param p: covariances
+    :return: ensures visuals are returned
+    '''
+
     result = "figure created"
     assert visualize(5, 6) == result
 

@@ -81,9 +81,10 @@ def preprocess(
 
 def create_kf_and_assign_predict_update(dim_z, X, P, A, Q, dt, R, H, B, U):
     '''
-    Function creates a Kalman Filter object and assigns all the instance variables # noqa: E501
+    :param configs tuple: all the values to define the kalman filter
     :return: Kalman Filter
     '''
+
     kf = KalmanFilter(dim_x=X.shape[0], dim_z=dim_z)
     kf.x = X
     kf.P = P
